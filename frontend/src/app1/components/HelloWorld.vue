@@ -20,13 +20,16 @@
       <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
     </ul>
     <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <template v-if="ecosystems.length > 0">
+      <ul>
+        <li :key="item.name" v-for="item in ecosystems">
+          <a :href="item.link" target="_blank" rel="noopener">{{ item.name }}</a>
+        </li>
+      </ul>
+    </template>
+    <template v-else>
+      Loading...
+    </template>
   </div>
 </template>
 
@@ -34,7 +37,8 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
+    ecosystems: Array,
   }
 }
 </script>

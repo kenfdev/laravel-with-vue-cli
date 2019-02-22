@@ -1,3 +1,6 @@
+/public/app
+/resources/views/spa
+
 /node_modules
 /public/hot
 /public/storage
