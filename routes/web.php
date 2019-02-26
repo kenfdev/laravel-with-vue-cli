@@ -12,3 +12,4 @@
  */
 
 Route::get('/app1{any}', 'SpaController@app1')->where('any', '(/?$|/.*)');
+Route::get('/app2{any}', 'SpaController@app2')->where('any', '(/?$|/.*)');

@@ -10,4 +10,9 @@ class SpaController extends Controller
     {
         return view('spa/app1');
     }
+
+    public function app2()
+    {
+        return view('spa/app2');
+    }
 }

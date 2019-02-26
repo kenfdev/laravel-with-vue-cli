@@ -12,5 +12,10 @@ module.exports = {
             template: 'templates/base.html',
             filename: `../../resources/views/spa/app1.blade.php`,
         },
+        app2: {
+            entry: 'src/app2/main.js',
+            template: 'templates/vuetify-base.html',
+            filename: `../../resources/views/spa/app2.blade.php`,
+        },
     },
 };
